@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.sectionTitle{
+    background: linear-gradient(90deg, #fc00ff, #00dbde);
+    color: transparent;
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sectionTitle::after{
+    content: '';
+    position:absolute;
+    clear:both;
+    width: 50px;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #fc00ff, #00dbde);
+}

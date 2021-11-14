@@ -1,0 +1,7 @@
+.loggedInUser{
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    color: transparent;
+    font-size: 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

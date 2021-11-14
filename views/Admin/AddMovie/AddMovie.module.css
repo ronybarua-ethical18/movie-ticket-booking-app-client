@@ -1,0 +1,58 @@
+.formHandle{
+    margin-top: 45px;
+}
+.adminButton{
+    border: none;
+    color: white;
+    margin-top: 30px;
+    outline: none;
+    background: linear-gradient(90deg, #fc00ff, #00dbde);
+    cursor:pointer;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition:all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+
+}   
+.imageHolder{
+    width: 100%;
+    margin:12px 0px;
+    border-radius: 5px;
+}
+.img{
+    width:300px;
+    height:170px;
+    background-size: cover;
+    object-fit: cover;
+}
+.input[type="file"]{
+    display:none;
+}
+.fileLabel{
+    padding:10px 15px;
+    border-radius: 15px;
+    color: #201639;
+    background-color: transparent;
+    border:2px solid #201639;
+    cursor:pointer;
+
+}
+.fileHandle{
+    margin-bottom: 20px;
+}
+.title{
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    color: transparent;
+    letter-spacing: 4px;
+    font-size: 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

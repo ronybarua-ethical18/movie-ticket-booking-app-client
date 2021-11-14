@@ -1,0 +1,20 @@
+.moviePosterMedium{
+    border: 2px solid white !important;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.commonStyle{
+    display: flex;
+    align-items: center;
+}
+
+.fontSizeCommon{
+    font-size: 16px;
+    color: white;
+}
+.fontSizeMini{
+    font-size:16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
