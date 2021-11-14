@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const httpLink = new HttpLink({
-    uri: `http://localhost:5000/`,
+    uri: `https://glacial-fortress-42423.herokuapp.com/`,
   });
 
   const authLink = setContext(() =>{
