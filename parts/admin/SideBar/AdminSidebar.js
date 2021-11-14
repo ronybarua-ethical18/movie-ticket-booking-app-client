@@ -24,7 +24,7 @@ const adminNavs = [
   {
     logo: <PersonIcon style={{marginRight: 15}} />,
     text: "Add Movie",
-    link: "/admin/dashboard/addMovie",
+    link: "/admin/addMovie",
   },
   {
     logo: <PersonOutlineIcon style={{marginRight: 15}} />,
@@ -57,7 +57,7 @@ const AdminSidebar = () => {
   return (
     <div className={styles.dashboard__sidebarLeft}>
       <div style={{marginBottom: 20, padding: "0 20px"}}>
-        <Link href="/"><h2 className={styles.brandLogo}>Ticket Counter</h2></Link>
+        <Link href="/" passHref><h2 className={styles.brandLogo}>Ticket Counter</h2></Link>
       </div>
       {/* navs */}
       <div className={styles.dashboard_navwrapper}>
