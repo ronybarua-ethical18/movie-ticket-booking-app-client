@@ -118,7 +118,7 @@ const LatestMovies = () => {
                   </IconButton>
                 </div>
                 <div>
-                  <Link href={`/singleMovie/${item.id}`}>
+                  <Link href="/singleMovie/[movieId]" as={`/singleMovie/${item.id}`}>
                     <button className={styles.playBtn}>Book</button>
                   </Link>
                 </div>
