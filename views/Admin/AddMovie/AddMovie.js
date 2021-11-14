@@ -7,14 +7,11 @@ import { Container, Grid } from "@material-ui/core";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import UIErrors from "../../../components/UIErrors/UIErrors";
 import AdminFormInput from "../../../components/AdminFormInput/AdminFormInput";
-// import storage from "../../../firebase";
+import storage from "../../../firebase";
 import { ADD_MOVIE_DATA } from "../../../utilities/hooks/GraphQL/MutataionData";
 import { useMutation } from "@apollo/client";
 import imageOne from "../../../public/assets/member-1.png";
 import imageTwo from "../../../public/assets/member-2.png";
-import firebaseApp from 'firebase/app'
-import firebase from "firebase";
-import firebaseConfig from '../../../firebase'
 
 const AddMovie = () => {
   const [movie, setMovie] = useState(null);
@@ -25,12 +22,7 @@ const AddMovie = () => {
 
   console.log(trailer);
   console.log(img);
-  let storage;
-  // initialize firebase
-  if (firebaseApp.apps.length === 0) {
-    firebase.initializeApp(firebaseConfig);
-    storage = firebase.storage();
-  }
+
 
   const upload = (items) => {
     items.forEach((item) => {
