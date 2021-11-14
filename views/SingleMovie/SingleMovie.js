@@ -11,6 +11,7 @@ import DeleteButton from "../../components/DeleteButton/DeleteButton";
 import LikeButton from "../../components/LikeButton/LikeButton";
 import GetAllMovies from "../../views/GetAllMovies/GetAllMovies";
 import { useQuery, useMutation } from "@apollo/client";
+import gql from "graphql-tag";
 // import { FETCH_SINGLE_MOVIE_QUERY } from "../../utilities/hooks/GraphQL/FetchSingleMovieData";
 import { CREATE_COMMENT_MUTATION } from "../../utilities/hooks/GraphQL/CreateCommentMutation";
 import { AuthContext } from "../../context/authContext";
