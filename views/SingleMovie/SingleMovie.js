@@ -11,7 +11,7 @@ import DeleteButton from "../../components/DeleteButton/DeleteButton";
 import LikeButton from "../../components/LikeButton/LikeButton";
 import GetAllMovies from "../../views/GetAllMovies/GetAllMovies";
 import { useQuery, useMutation } from "@apollo/client";
-import { FETCH_SINGLE_MOVIE_QUERY } from "../../utilities/hooks/GraphQL/FetchSingleMovieData";
+// import { FETCH_SINGLE_MOVIE_QUERY } from "../../utilities/hooks/GraphQL/FetchSingleMovieData";
 import { CREATE_COMMENT_MUTATION } from "../../utilities/hooks/GraphQL/CreateCommentMutation";
 import { AuthContext } from "../../context/authContext";
 import moment from "moment";
@@ -140,5 +140,31 @@ const SingleMovie = () => {
     </div>
   );
 };
+
+const FETCH_SINGLE_MOVIE_QUERY = gql`
+  query ($movieId: ID!) {
+    getMovie(movieId: $movieId) {
+      id
+      title
+      desc
+      genre
+      likes {
+        id
+        username
+      }
+      comments {
+        id
+        body
+        username
+        createdAt
+      }
+      likeCount
+      commentCount
+      duration
+      img
+      createdAt
+    }
+  }
+`;
 
 export default SingleMovie;
