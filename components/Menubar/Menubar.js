@@ -24,7 +24,7 @@ const Menubar = () => {
           </div>
           {user && <LoggedInUser />}
           {user ? (
-            <Link href="/">
+            <Link href="/" passHref>
               <ExitToAppIcon onClick={logout} style={{ marginLeft: 15, cursor: "pointer" }} />
             </Link>
           ) : (

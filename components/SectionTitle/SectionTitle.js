@@ -14,7 +14,7 @@ const SectionTitle = ({ title }) => {
       <h2 className={styles.sectionTitle}>{title}</h2>
       {!router.pathname === '/singleMovie' &&<div style={{display: "flex", alignItems: "center", justifyContent:"space-between"}}>
         <LoggedInUser />
-        <Link href="/"><ExitToAppIcon onClick={logout} style={{ marginLeft: 15, cursor: "pointer" }} /></Link>
+        <Link href="/"  passHref><ExitToAppIcon onClick={logout} style={{ marginLeft: 15, cursor: "pointer" }} /></Link>
       </div>}
     </div>
   );
