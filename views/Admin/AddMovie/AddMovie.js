@@ -7,11 +7,13 @@ import { Container, Grid } from "@material-ui/core";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import UIErrors from "../../../components/UIErrors/UIErrors";
 import AdminFormInput from "../../../components/AdminFormInput/AdminFormInput";
-import storage from "../../../firebase";
+// import storage from "../../../firebase";
 import { ADD_MOVIE_DATA } from "../../../utilities/hooks/GraphQL/MutataionData";
 import { useMutation } from "@apollo/client";
 import imageOne from "../../../public/assets/member-1.png";
 import imageTwo from "../../../public/assets/member-2.png";
+import firebase from "firebase";
+import firebaseConfig from '../../../firebase'
 
 const AddMovie = () => {
   const [movie, setMovie] = useState(null);
@@ -20,8 +22,14 @@ const AddMovie = () => {
   const [uploadFile, setUploadFile] = useState(0);
   const [errors, setErrors] = useState({});
 
-  console.log(trailer)
-  console.log(img)
+  console.log(trailer);
+  console.log(img);
+
+  // initialize firebase
+  if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  const storage = firebase.storage();
 
   const upload = (items) => {
     items.forEach((item) => {
@@ -215,7 +223,7 @@ const AddMovie = () => {
             )}
           </div>
         </div>
-        <UIErrors errors={errors}/>
+        <UIErrors errors={errors} />
       </Container>
     </AdminLayout>
   );

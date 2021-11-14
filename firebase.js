@@ -1,4 +1,3 @@
-import firebaseApp from "firebase";
 const firebaseConfig = {
   apiKey: "AIzaSyCEv8Pol6raVCrtIDq9z1xmsa3MLvv8xSs",
   authDomain: "ticket-counter-merng-app.firebaseapp.com",
@@ -8,8 +7,4 @@ const firebaseConfig = {
   appId: "1:690560244440:web:537b2f1a9379cde66c15ad",
 };
 
-firebaseApp.initializeApp(firebaseConfig)
-
-const storage = firebaseApp.storage();
-
-export default storage;
+export default firebaseConfig;
