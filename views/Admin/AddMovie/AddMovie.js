@@ -12,7 +12,7 @@ import { ADD_MOVIE_DATA } from "../../../utilities/hooks/GraphQL/MutataionData";
 import { useMutation } from "@apollo/client";
 import imageOne from "../../../public/assets/member-1.png";
 import imageTwo from "../../../public/assets/member-2.png";
-import firebase from "firebase";
+import * as firebase from "firebase";
 import firebaseConfig from '../../../firebase'
 
 const AddMovie = () => {
@@ -24,12 +24,12 @@ const AddMovie = () => {
 
   console.log(trailer);
   console.log(img);
-
+  let storage;
   // initialize firebase
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
+    storage = firebase.storage();
   }
-  const storage = firebase.storage();
 
   const upload = (items) => {
     items.forEach((item) => {
