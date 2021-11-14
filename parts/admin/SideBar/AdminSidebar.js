@@ -24,7 +24,7 @@ const adminNavs = [
   {
     logo: <PersonIcon style={{marginRight: 15}} />,
     text: "Add Movie",
-    link: "/admin/addMovie",
+    link: "/admin/dashboard/addMovie",
   },
   {
     logo: <PersonOutlineIcon style={{marginRight: 15}} />,
