@@ -7,7 +7,7 @@ import { Container, Grid } from "@material-ui/core";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import UIErrors from "../../../components/UIErrors/UIErrors";
 import AdminFormInput from "../../../components/AdminFormInput/AdminFormInput";
-import storage from "../../../pages/firebase";
+import storage from "../../../firebase";
 import { ADD_MOVIE_DATA } from "../../../utilities/hooks/GraphQL/MutataionData";
 import { useMutation } from "@apollo/client";
 import imageOne from "../../../public/assets/member-1.png";
